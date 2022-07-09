@@ -10,3 +10,6 @@ class Car(Device):
 
     def turn_on(self):
         return 'Engine started'
+
+    def refuel(self):
+        raise NotImplementedError('Method not implemented')

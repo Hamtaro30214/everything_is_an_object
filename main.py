@@ -2,6 +2,7 @@ from creatures.Animal import Animal
 from devices.Car import Car
 from creatures.Human import Human
 from devices.Phone import Phone
+from devices.Electric import Electric
 
 human = Human('Marcin', 'Rosicki', "Human")
 print(human)
@@ -35,3 +36,10 @@ human.phone.sell(human, human2, 900)
 print(human.balance)
 print(human2.balance)
 print(human2.phone)
+phone1.install_an_app('BTD6', '31.2', 29.99)
+print(phone1.app)
+car3 = Electric('Tesla', "X", 70000)
+car3.fuel = 4
+print(car3.fuel)
+car3.refuel()
+print(car3.fuel)
