@@ -1,7 +1,9 @@
 import random
 
+from Sellable import Sellable
 
-class Animal:
+
+class Animal(Sellable):
     def __init__(self, species):
         self.species = species
         self.name = None
@@ -33,3 +35,15 @@ class Animal:
             self.weight -= lost_weight
         return 'The animal lost some weight'
 
+    def sell(self, seller, buyer, price):
+        if self != seller.animal:
+            raise AttributeError("No animal 𓃡")
+        if self.species == "Human":
+            raise AttributeError("No slavery 🐕")
+        if buyer.balance < price:
+            raise ValueError("No money 💰")
+        buyer.balance -= price
+        seller.balance += price
+        seller.animal = None
+        buyer.animal = self
+        return 'The animal has been successfully sold'

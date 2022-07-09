@@ -8,6 +8,7 @@ class Human(Animal):
         self.last_name = last_name
         self.phone = None
         self._car = None
+        self.animal = None
         self._balance = 0
 
     def __repr__(self):
