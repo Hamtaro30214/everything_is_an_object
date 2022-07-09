@@ -7,6 +7,7 @@ class Human(Animal):
         self.fist_name = fist_name
         self.last_name = last_name
         self.phone = None
+        self.car = None
 
     def __repr__(self):
         return f'Human({self.fist_name}, {self.last_name}, {self.phone})'
