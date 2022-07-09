@@ -15,3 +15,5 @@ print(hamster.weight)
 car1 = Car("Audi", "A4", '40000')
 human.car = car1
 print(human.car)
+human.balance = 3500
+print(human.balance)
