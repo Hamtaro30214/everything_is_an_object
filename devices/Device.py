@@ -1,8 +1,11 @@
-class Car:
+class Device:
     def __init__(self, producer, model, price):
         self.producer = producer
         self.model = model
         self.price = price
 
     def __repr__(self):
-        return f'Car({self.producer}, {self.model}, {self.price})'
+        return f'{self.producer}, {self.model}, {self.price}'
+
+    def turn_on(self):
+        raise NotImplementedError('Method not implemented')

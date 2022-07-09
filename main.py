@@ -1,5 +1,5 @@
 from Animal import Animal
-from Car import Car
+from devices.Car import Car
 from Human import Human
 
 human = Human('Marcin', 'Rosicki', "Human")
@@ -22,3 +22,4 @@ car2 = Car("BMW", "M2", 200000)
 human.balance = 250000
 human.car = car2
 print(human.car)
+print(human.car.turn_on())
