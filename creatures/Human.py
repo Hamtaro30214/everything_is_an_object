@@ -7,9 +7,9 @@ class Human(Animal):
         self.fist_name = fist_name
         self.last_name = last_name
         self.phone = None
-        self._car = None
         self.animal = None
         self._balance = 0
+        self.garage = []
 
     def __repr__(self):
         return f'Human({self.fist_name}, {self.last_name}, {self.phone})'
@@ -25,16 +25,17 @@ class Human(Animal):
         self._balance = money
 
     @property
-    def car(self):
-        return self._car
+    def car(self, index=-1):
+        if index + 1 > len(self.garage):
+            raise IndexError('No car at given index')
+        return self.garage[index]
 
     @car.setter
-    def car(self, vehicle):
-        if self.balance > vehicle.price:
-            self._car = vehicle
-            print('The car was bought with cash')
-        elif self.balance > vehicle.price / 12:
-            self._car = vehicle
-            print('The car was bought on credit')
-        else:
-            print('You are poor ☹')
+    def car(self, vehicle, index=-1):
+        self.garage.insert(index, vehicle)
+
+    def value_of_cars(self):
+        return sum(car.price for car in self.garage)
+
+    def sort_garage(self):
+        self.garage.sort(key=lambda x: x.age)
