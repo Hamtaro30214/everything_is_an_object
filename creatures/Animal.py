@@ -1,9 +1,9 @@
 import random
-
 from Sellable import Sellable
+from creatures.Feedable import Feedable
 
 
-class Animal(Sellable):
+class Animal(Sellable, Feedable):
     def __init__(self, species):
         self.species = species
         self.name = None

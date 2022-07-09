@@ -1,6 +1,6 @@
-from Animal import Animal
+from creatures.Animal import Animal
 from devices.Car import Car
-from Human import Human
+from creatures.Human import Human
 from devices.Phone import Phone
 
 human = Human('Marcin', 'Rosicki', "Human")

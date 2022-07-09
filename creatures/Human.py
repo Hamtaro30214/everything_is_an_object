@@ -1,4 +1,4 @@
-from Animal import Animal
+from creatures.Animal import Animal
 
 
 class Human(Animal):
