@@ -12,8 +12,13 @@ print(hamster.feed())
 print(hamster.take_for_a_walk())
 print(hamster.take_for_a_walk())
 print(hamster.weight)
-car1 = Car("Audi", "A4", '40000')
+car1 = Car("Audi", "A4", 40000)
 human.car = car1
 print(human.car)
 human.balance = 3500
 print(human.balance)
+print(human.car)
+car2 = Car("BMW", "M2", 200000)
+human.balance = 250000
+human.car = car2
+print(human.car)
