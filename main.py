@@ -1,4 +1,5 @@
 from creatures.Animal import Animal
+from devices.Application import Application
 from devices.Car import Car
 from creatures.Human import Human
 from devices.Phone import Phone
@@ -58,3 +59,25 @@ print(car3.was_owner(human2))
 print(car3.number_of_transactions())
 print(car3.was_sold_to(human, human2))
 print(car3.transactions)
+
+apple = Phone('Apple', 2020, 4500.0, 16.9)
+print(apple.install_an_app('youtube', 'v1.0', 'Google Play'))
+BTD6 = Application('BTD6', '31.2', 29.99)
+BTD4 = Application('BTD4', '7.8', 4.99)
+BTD2 = Application('BTD2', '3.8', 0)
+BTD3 = Application('BTD3', '6.9', 0)
+BTD7 = Application('BTD7', '1.3', 15.0)
+human.phone = apple
+human.balance = 1000
+print(human.phone.install_new_app(BTD6, human))
+print(human.phone.install_new_app(BTD2, human))
+print(human.phone.install_new_app(BTD3, human))
+print(human.phone.install_new_app(BTD7, human))
+print(human.balance)
+print(apple.is_installed(BTD6))
+print(apple.is_installed_by_name(BTD6.name))
+print(apple.is_installed_by_name(BTD4.name))
+print(apple.free_applications())
+print(apple.get_installed_apps())
+print(apple.app_names())
+print(human.phone.app_names_by_cost())
