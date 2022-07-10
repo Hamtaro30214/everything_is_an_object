@@ -43,7 +43,18 @@ car3.fuel = 4
 print(car3.fuel)
 car3.refuel()
 print(car3.fuel)
+human.car = car3
+car3.owners.append(human)
 print(human.value_of_cars())
 print(human.garage)
 human.sort_garage()
+human2.balance = 500000
 print(human.garage)
+print(human.car.sell(human, human2, 1500))
+print(human.car)
+print(car3.owners)
+print(car3.was_sold_to(human, human2))
+print(car3.was_owner(human2))
+print(car3.number_of_transactions())
+print(car3.was_sold_to(human, human2))
+print(car3.transactions)

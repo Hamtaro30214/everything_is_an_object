@@ -5,7 +5,7 @@ class Device:
         self.price = price
 
     def __repr__(self):
-        return f'{self.producer}, {self.model}, {self.price}'
+        return f'Device({self.producer}, {self.model}, {self.price})'
 
     def turn_on(self):
         raise NotImplementedError('Method not implemented')
